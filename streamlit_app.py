@@ -62,7 +62,7 @@ add_my_fuit = streamlit.text_input('What fruit would you like to add?')
 if streamlit.button('Add a fuit to a list !'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     back_from_function = insert_new_row_snowflake(add_my_fuit)
-    streamlit.dataframe(back_from_function)
+    streamlit.write(back_from_function)
 
 
 
